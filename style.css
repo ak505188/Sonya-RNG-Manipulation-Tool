@@ -1,0 +1,52 @@
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+h6 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.manip.images.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  --gap: 10px;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+}
+
+.manip.images.container > * {
+  margin: var(--gap) 0 0 var(--gap);
+}
+
+.ui.container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 50px auto;
+}
+
+.quadrant.container {
+  margin-right: 100px;
+  display: grid;
+  grid-template-columns: 25px 50px 50px 50px;
+  grid-template-rows: 25px 50px 50px 50px;
+}
+
+.quadrant.container button {
+  background-color: lightgrey;
+  border-radius: 0;
+  border: none;
+  box-shadow:
+    2px 0 0 0 #888,
+    0 2px 0 0 #888,
+    2px 2px 0 0 #888,   /* Just to fix the corner */
+    2px 0 0 0 #888 inset,
+    0 2px 0 0 #888 inset;
+}
+
+.quadrant.container button.current {
+  background-color: yellow;
+  outline: none;
+}
